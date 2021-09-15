@@ -6,10 +6,14 @@
   <script src="bundle.js" async></script>
 </head>
 <body>
-  <h1 data-controller="example"></h1>
-  <div data-controller="hello">
-    <input data-hello-target="name" type="text">
-    <button data-action="click->hello#greet">Greet</button>
+  <div data-controller="clipboard">
+    PIN: <input data-clipboard-target="source" type="text" value="1234" readonly>
+    <button data-action="clipboard#copy">Copy to Clipboard</button>
+  </div>
+
+  <div data-controller="clipboard">
+    PIN: <textarea data-clipboard-target="source" readonly>3737</textarea>
+    <a href="#" data-action="clipboard#copy" class="clipboard-button">Copy to clipboard</a>
   </div>
 </body>
 </html>
